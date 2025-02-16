@@ -1,9 +1,17 @@
 {
-    "title": "Anushree Subramaniam",
-    "btn": {
-        "about":"About",
-        "experience":"Experience",
-        "projects":"Projects",
-        "certifications":"Certifications"
-    }
+  "title": "Hi, I'm Anushree. A",
+  "description": {
+    "landing-page": "I'm a data analyst in Fredericton that loves all things data! I specialize in crafting visual stories from data, blending technical know-how with strategic business thinking. My varied background in analytics and technology enables me to deliver innovative, growth-focused solutions."
+  },
+  "roles": {
+    "data-analyst": "Data Analyst",
+    "data-engineer": "Data Engineer",
+    "cloud-enthusiast": "Cloud Enthusiast"
+  },
+  "btn": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "certifications": "Certifications"
+  }
 }

@@ -23,7 +23,7 @@
               :key="item.name"
               :href="item.href"
               :class="[
-                'relative group rounded-md px-3 py-2 text-md text-black font-medium'
+                'relative group rounded-md px-3 py-2 text-md text-black font-medium',
               ]"
               :aria-current="item.current ? 'page' : undefined"
             >
@@ -87,15 +87,14 @@ const navigation = [
   { name: content.btn.projects, href: "#", current: false },
   { name: content.btn.certifications, href: "#", current: false },
 ];
-
 </script>
 
-<style>
+<style scoped>
 .blob {
   border-radius: 94% 31% 30% 67% / 67% 37% 56% 34%;
   width: 60px;
   height: 40px;
-  background-color: #0FA3B1;
+  background-color: #0fa3b1;
   box-shadow: -10vmin 10vmin 0 rgba(255, 255, 255, 0.07);
 }
 </style>
