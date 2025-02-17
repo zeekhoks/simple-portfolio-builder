@@ -79,13 +79,13 @@
 <script setup lang="ts">
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/solid";
-import content from "../../public/content.json";
+import content from "../assets/content.json";
 
 const navigation = [
-  { name: content.btn.about, href: "#", current: true },
-  { name: content.btn.experience, href: "#", current: false },
-  { name: content.btn.projects, href: "#", current: false },
-  { name: content.btn.certifications, href: "#", current: false },
+  { name: content.sections.about, href: "#", current: true },
+  { name: content.sections.experience, href: "#", current: false },
+  { name: content.sections.projects, href: "#", current: false },
+  { name: content.sections.certifications, href: "#", current: false },
 ];
 </script>
 

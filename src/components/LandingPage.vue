@@ -1,10 +1,13 @@
 <template>
   <div
-    class="container mx-auto flex flex-col md:flex-row items-center justify-between p-16 font-raleway"
+    class="container mx-auto flex flex-col md:flex-row items-center justify-between p-16"
   >
     <div class="md:w-3/4 mb-6 md:pr-20 md:mb-0">
-      <div class="text-[60px] mb-4">{{ title }} {{ displayRoles }}</div>
-      <p class="text-lg leading-relaxed">
+      <h1 class="text-huge font-raleway mb-4">
+        {{ title }}
+      </h1>
+      <h1 class="text-medium font-raleway mb-4">A {{ displayRoles }}</h1>
+      <p class="text-regular font-raleway leading-relaxed">
         {{ description }}
       </p>
     </div>
@@ -23,10 +26,10 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import content from "../../public/content.json";
+import content from "../assets/content.json";
 
-const title = ref(content.title);
-const description = ref(content.description["landing-page"]);
+const title = content.title;
+const description = content.description["landing-page"];
 const displayRoles = ref("");
 const charIndex = ref(0);
 const roleIndex = ref(0);

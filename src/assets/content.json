@@ -1,0 +1,90 @@
+{
+  "title": "Hi, I'm Anushree!",
+  "description": {
+    "landing-page": "I'm a data analyst in Fredericton that loves all things data! I specialize in crafting visual stories from data, blending technical know-how with strategic business thinking. My varied background in analytics and technology enables me to deliver innovative, growth-focused solutions."
+  },
+  "roles": {
+    "data-analyst": "Data Analyst",
+    "data-engineer": "Data Engineer",
+    "cloud-enthusiast": "Cloud Enthusiast"
+  },
+  "sections": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "certifications": "Certifications"
+  },
+  "img": {
+    "signature": "./singature.png",
+    "landing-page-profile": "./profile.png"
+  },
+  "experiences": [
+    {
+      "title": "Business Analyst, ",
+      "location": "J.D. Irving, Saint John, New Brunswick",
+      "timeline": "May 2023 - Present",
+      "description": [
+        "Optimized inefficient Alteryx workflows, resolving inconsistent reporting processes and data issues, thereby improving operational efficiency by 20% and enhanced data pipelines",
+        "Enhanced Tableau dashboards to track key performance indicators, by conducting thorough data analysis and implementing validation processes to ensure data integrity and accuracy thereby improving visibility and enabling data-driven decisions",
+        "Led the migration of 5+ Tableau dashboards into Power BI, implementing business requirements and improving data accessibility and reporting capabilities across teams",
+        "Designed and implemented 10+ interactive Power BI reports with advanced analytics and DAX queries to improve data visualization capabilities for stakeholders and increase user engagement",
+        "Skills - Big Data, Tableau"
+      ]
+    },
+    {
+      "title": "Business Analyst, ",
+      "location": "Deloitte, Fredericton, New Brunswick",
+      "timeline": "May 2022 - Dec 2022",
+      "description": [
+        "Analyzed large datasets using Excel to identify patterns, gaps and critical risks in IT systems, presented the findings in data-driven reports that influenced 2 key clients om system upgrades",
+        "Conducted IT audits and analyzed 50+ IT applications and systems to identify potential risks and ensure compliance with industry standards, using Excel documentation and internal IT applications",
+        "Performed testing on IT controls, compiled reports and streamlined documentation, reducing reporting time by 15% while maintaining accurate data for 3 major clients",
+        "Skills - Big Data, Tableau"
+      ]
+    },
+    {
+      "title": "Student, ",
+      "location": "University of New Brunswick, Fredericton, New Brunswick",
+      "timeline": "Sep 2021 - Apr 2023",
+      "description": [
+        "Master of Science in Computer Science – GPA 4.1",
+        "Courses - Object Oriented Concepts, Data Structures and Applications, Software Engineering, Computer Networks, Database Management Systems, Machine Learning, Cloud Technology and Applications, Internet of Things",
+        "Skills - Python, Java, C++ "
+      ]
+    },
+    {
+      "title": "Business Analyst, ",
+      "location": "Colgate Global Business Services Pvt Ltd, Mumbai, India",
+      "timeline": "May 2019 - June 2019",
+      "description": [
+        "Led the implementation of an AI-based OCR software (Esker) in the EDI team, automating manual order processing for 300+ customers, improving order creation efficiency by 90%, collaborating with cross-functional teams, reducing processing time and errors while enhancing customer satisfaction and engagement",
+        "Resolved 100+ high priority incidents monthly, facilitated change requests across systems, minimizing disruptions to global business operations, ensuring seamless order processing into SAP ",
+        "Trained 60+ global cross-functional team members on OCR technology (Esker), providing detailed documentation and hands-on workshops, enabled teams to fully utilize the technology, reducing support requests by 25% within the first quarter post-implementation",
+        "Skills - SAP, Python"
+      ]
+    },
+    {
+      "title": "Data Analyst Intern, ",
+      "location": "Edureka, Bengaluru, India",
+      "timeline": "May 2019 - June 2019",
+      "description": [
+        "Authored 3 high-traffic blogs and 1 YouTube video on Big Data, reaching 30k+ blog views and 140k+ video views",
+        "What is Big Data - https://www.edureka.co/blog/what-is-big-data",
+        "Hadoop YARN Tutorial - https://www.edureka.co/blog/hadoop-yarn-tutorial ",
+        "Big Data Analytics: Turning Insights into Action - https://www.edureka.co/blog/big-data-analytics",
+        "Big Data Analytics Video - https://www.youtube.com/watch?v=k7zu3NXEiGY",
+        "Skills - Python, Big Data"
+      ]
+    },
+    {
+      "title": "Student, ",
+      "location": "Mumbai University, Mumbai, India",
+      "timeline": "Aug 2015 - Aug 2019",
+      "description": [
+        "Bachelor of Technology, Computer Science",
+        "Courses - Object Oriented Concepts, Data Structures and Applications, Software Engineering, Computer Networks, Database Management Systems, Machine Learning, Cloud Technology and Applications, Internet of Things",
+        "Skills - Python, Java, C++ "
+      ]
+    }
+  ]
+}

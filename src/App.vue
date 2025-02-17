@@ -4,8 +4,11 @@
   </div>
   <div v-else>
     <Navbar />
-    <div class="mt-20 pt-20 pb-20">
+    <div class="mt-20 pt-10 pb-10">
       <LandingPage />
+    </div>
+    <div class="pb-10">
+      <Experience />
     </div>
   </div>
 </template>
@@ -14,6 +17,7 @@ import { ref, onMounted } from "vue";
 import Navbar from "./components/Navbar.vue";
 import Loader from "./components/Loader.vue";
 import LandingPage from "./components/LandingPage.vue";
+import Experience from "./components/Experience.vue";
 
 const isLoading = ref(true);
 

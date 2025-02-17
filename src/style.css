@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 :root {
-  background-color: #f3f3f3 ;
+  background-color: #f3f3f3;
 
   /* font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -10,8 +10,19 @@
   -moz-osx-font-smoothing: grayscale; */
 }
 
-@theme{
+@theme {
+  --text-huge: 55px;
   --font-raleway: "Raleway", "sans-serif";
+  --text-huge--font-weight: 600;
+  --text-medium: 45px;
+  --text-medium--font-weight: 500;
+  --text-heading: 24px;
+  --text-heading--font-weight: 400;
+  --text-regular: 18px;
+  --text-regular--font-weight: 300;
+  --text-small: 16px;
+  --text-small--font-weight: 300;
   --color-primary: #f3f3f3;
-  --color-secondary: #0FA3B1;
+  --color-secondary: #0fa3b1;
+  --color-tertiary: #f26a8d;
 }
