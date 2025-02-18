@@ -15,7 +15,7 @@
     "certifications": "Certifications"
   },
   "img": {
-    "signature": "./singature.png",
+    "signature": "./signature.png",
     "landing-page-profile": "./profile.png"
   },
   "experiences": [
@@ -85,6 +85,23 @@
         "Courses - Object Oriented Concepts, Data Structures and Applications, Software Engineering, Computer Networks, Database Management Systems, Machine Learning, Cloud Technology and Applications, Internet of Things",
         "Skills - Python, Java, C++ "
       ]
+    }
+  ],
+  "certifications": [
+    {
+      "filename": "powerbi",
+      "title": "Microsoft Certified Power BI Data Analyst Associate (PL300)",
+      "issued": "Issued December 2024"
+    },
+    {
+      "filename": "alteryx",
+      "title": "Alteryx Designer Core Certified",
+      "issued": "Issued December 2024"
+    },
+    {
+      "filename": "azurefundas",
+      "title": "Microsoft Certified Azure Data Fundamentals",
+      "issued": "Issued Feb 2025"
     }
   ]
 }

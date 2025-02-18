@@ -3,7 +3,7 @@
     <div class="w-full rounded-2xl bg-white p-2">
       <Disclosure as="div" v-slot="{ open }">
         <DisclosureButton
-          class="flex flex-row items-center w-full justify-between rounded-lg bg-primary px-4 py-2 text-left hover:bg-secondary/40 focus:outline-none focus-visible:ring focus-visible:ring-secondary/75"
+          class="flex flex-row items-center w-full justify-between rounded-lg bg-white px-4 py-2 text-left hover:bg-secondary/40 focus:outline-none focus-visible:ring focus-visible:ring-secondary/75"
         >
           <div class="flex flex-row justify-start items-baseline">
             <span class="text-heading text-black">{{ content.title }}</span>
@@ -17,9 +17,13 @@
           />
         </DisclosureButton>
         <DisclosurePanel class="px-4 pb-2 pt-4 text-small text-black/80">
-          <p class="text-small text-gray-600">{{ content.timeline }}</p>
+          <p class="text-small font-bold">{{ content.timeline }}</p>
           <ul class="list-disc list-inside mt-2">
-            <li v-for="(point, index) in content.description" :key="index">
+            <li
+              v-for="(point, index) in content.description"
+              :key="index"
+              class="text-small font-semibold"
+            >
               {{ point }}
             </li>
           </ul>

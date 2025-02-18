@@ -10,7 +10,7 @@
         <div class="flex-shrink-0 flex items-center">
           <img
             class="h-12 w-auto"
-            src="../assets/singature.png"
+            src="../assets/signature.png"
             alt="Signature"
           />
         </div>
