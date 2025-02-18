@@ -12,7 +12,9 @@
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
-    "certifications": "Certifications"
+    "resume": "Resume",
+    "certifications": "Certifications",
+    "contact": "Contact"
   },
   "img": {
     "signature": "./signature.png",
@@ -20,7 +22,7 @@
   },
   "experiences": [
     {
-      "title": "Business Analyst, ",
+      "title": "Data Analyst, ",
       "location": "J.D. Irving, Saint John, New Brunswick",
       "timeline": "May 2023 - Present",
       "description": [
@@ -103,5 +105,11 @@
       "title": "Microsoft Certified Azure Data Fundamentals",
       "issued": "Issued Feb 2025"
     }
-  ]
+  ],
+  "contact": {
+    "description": "Want to connect or collaborate on a project? Feel free to hit me up on any of these platforms!",
+    "email": "anushreesubramaniam@gmail.com",
+    "linkedinLink": "https://www.linkedin.com/in/anushree-subramaniam/",
+    "resumeLink": "https://drive.google.com/file/d/1qxFbBoNdigRUuudIFKqgOC_tpYFoMnP9/view?usp=sharing"
+  }
 }

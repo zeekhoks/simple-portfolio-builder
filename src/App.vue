@@ -4,14 +4,17 @@
   </div>
   <div v-else>
     <Navbar />
-    <div class="mt-20 pt-10">
+    <div id="landing-page" class="mt-20 pt-10">
       <LandingPage />
     </div>
-    <div>
+    <div id="experience">
       <Experience />
     </div>
-    <div>
+    <div id="certification">
       <Certification />
+    </div>
+    <div id="contact">
+      <Contact />
     </div>
   </div>
 </template>
@@ -22,6 +25,7 @@ import Loader from "./components/Loader.vue";
 import LandingPage from "./components/LandingPage.vue";
 import Experience from "./components/Experience.vue";
 import Certification from "./components/Certification.vue";
+import Contact from "./components/Contact.vue";
 
 const isLoading = ref(true);
 

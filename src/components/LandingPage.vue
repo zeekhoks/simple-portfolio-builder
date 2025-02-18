@@ -1,13 +1,13 @@
 <template>
   <div
-    class="container mx-auto flex flex-col md:flex-row items-center justify-between p-16"
+    class="container mx-auto flex flex-col md:flex-row items-center justify-between p-16 font-roboto"
   >
     <div class="md:w-3/4 mb-6 md:pr-20 md:mb-0">
-      <h1 class="text-huge font-raleway mb-4">
+      <h1 class="text-huge mb-4">
         {{ title }}
       </h1>
-      <h1 class="text-medium font-raleway mb-4">A {{ displayRoles }}</h1>
-      <p class="text-regular font-raleway leading-relaxed">
+      <h1 class="text-medium mb-4">A {{ displayRoles }}</h1>
+      <p class="text-regular leading-relaxed">
         {{ description }}
       </p>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <Disclosure
     as="nav"
-    class="fixed top-0 w-full z-50 bg-primary backdrop-blur-md font-raleway h-20 border-b-2 border-secondary"
+    class="fixed top-0 w-full z-50 bg-primary backdrop-blur-md font-roboto h-20 border-b-2 border-secondary"
     v-slot="{ open }"
   >
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 h-full">
@@ -21,11 +21,12 @@
             <a
               v-for="item in navigation"
               :key="item.name"
-              :href="item.href"
+              :href="item.name === resumeName ? '#' : item.href"
               :class="[
                 'relative group rounded-md px-3 py-2 text-md text-black font-medium',
               ]"
               :aria-current="item.current ? 'page' : undefined"
+              @click="handleClick(item)"
             >
               {{ item.name }}
               <span
@@ -60,7 +61,7 @@
           v-for="item in navigation"
           :key="item.name"
           as="a"
-          :href="item.href"
+          :href="item.name === resumeName ? '#' : item.href"
           :class="[
             item.current
               ? 'bg-secondary text-black'
@@ -68,6 +69,7 @@
             'block rounded-md px-3 py-2 text-base font-medium',
           ]"
           :aria-current="item.current ? 'page' : undefined"
+          @click="handleClick(item)"
         >
           {{ item.name }}
         </DisclosureButton>
@@ -81,12 +83,37 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/solid";
 import content from "../assets/content.json";
 
+const resumeName = content.sections.resume;
 const navigation = [
-  { name: content.sections.about, href: "#", current: true },
-  { name: content.sections.experience, href: "#", current: false },
-  { name: content.sections.projects, href: "#", current: false },
-  { name: content.sections.certifications, href: "#", current: false },
+  { name: content.sections.about, href: "#landing-page", current: true },
+  { name: content.sections.experience, href: "#experience", current: false },
+  // { name: content.sections.projects, href: "#", current: false },
+  {
+    name: content.sections.resume,
+    href: content.contact.resumeLink,
+    current: false,
+  },
+  {
+    name: content.sections.certifications,
+    href: "#certification",
+    current: false,
+  },
+  {
+    name: content.sections.contact,
+    href: "#contact",
+    current: false,
+  },
 ];
+
+const handleClick = (item: {
+  name: string;
+  href: string;
+  current: boolean;
+}) => {
+  if (item.name === resumeName) {
+    window.open(item.href, "_blank");
+  }
+};
 </script>
 
 <style scoped>

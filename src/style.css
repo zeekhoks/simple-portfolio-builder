@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -11,7 +11,7 @@
 }
 
 @theme {
-  --font-raleway: "Raleway", "sans-serif";
+  --font-roboto: "Roboto", "sans-serif";
   --font-bold--font-style: bold;
   --font-semibold--font-style: semi-bold;
   --text-huge: 55px;
