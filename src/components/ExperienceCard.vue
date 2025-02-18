@@ -48,5 +48,5 @@ interface Props {
   content: Experience;
 }
 
-const props = defineProps<Props>();
+defineProps<Props>();
 </script>
