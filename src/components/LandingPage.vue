@@ -13,13 +13,13 @@
     </div>
     <div class="md:w-1/4 flex justify-center relative">
       <img
-        src="../assets/profile.png"
+        src="../assets/anushreeprofilepic.png"
         alt="Anushree Image"
         class="w-[400px] h-[350px] object-cover rounded-[80px] relative z-10"
       />
-      <span
+      <!-- <span
         :class="'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none blob'"
-      ></span>
+      ></span> -->
     </div>
   </div>
 </template>
@@ -30,6 +30,7 @@ import content from "../assets/content.json";
 
 const title = content.title;
 const description = content.description["landing-page"];
+// const description_second = content.description["landing-page-second"];
 const displayRoles = ref("");
 const charIndex = ref(0);
 const roleIndex = ref(0);
