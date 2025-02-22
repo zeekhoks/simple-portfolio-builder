@@ -22,7 +22,7 @@
             <li
               v-for="(point, index) in content.description"
               :key="index"
-              class="text-small font-semibold"
+              class="text-small"
             >
               {{ point }}
             </li>
