@@ -2,7 +2,7 @@
   <div
     class="container mx-auto flex flex-col md:flex-row items-center justify-between p-16 font-roboto"
   >
-    <div class="md:w-3/4 mb-6 md:pr-20 md:mb-0">
+    <div class="md:w-1/2 mb-6 md:pr-20 md:mb-0">
       <h1 class="text-huge mb-4">
         {{ title }}
       </h1>
@@ -11,11 +11,11 @@
         {{ description }}
       </p>
     </div>
-    <div class="md:w-1/4 flex justify-center relative">
+    <div class="md:w-1/2 flex justify-center relative">
       <img
-        src="../assets/anushreeprofilepic.png"
+        src="../assets/anushreeprofile.png"
         alt="Anushree Image"
-        class="w-[400px] h-[350px] object-cover rounded-[80px] relative z-10"
+        class="w-[400px] h-[400px] object-contain"
       />
       <!-- <span
         :class="'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none blob'"
@@ -80,15 +80,4 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
-.blob {
-  border-radius: 94% 31% 30% 67% / 67% 37% 56% 34%;
-  width: 300px;
-  height: 350px;
-  background-color: #0fa3b1;
-  opacity: 0.85;
-  box-shadow: -10vmin 10vmin 0 rgba(255, 255, 255, 0.07);
-  z-index: 0;
-  transform: rotate(140deg);
-}
-</style>
+<style scoped></style>

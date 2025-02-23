@@ -16,7 +16,7 @@
         </div>
 
         <!-- Desktop Navigation Elements on the Right -->
-        <div class="hidden sm:block">
+        <!-- <div class="hidden sm:block">
           <div class="flex space-x-4">
             <a
               v-for="item in navigation"
@@ -25,18 +25,39 @@
               :class="[
                 'relative group rounded-md px-3 py-2 text-md text-black font-medium',
               ]"
-              :aria-current="item.current ? 'page' : undefined"
               @click="handleClick(item)"
             >
               {{ item.name }}
               <span
                 :class="[
-                  'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 pointer-events-none blob transition-all duration-300',
+                  'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 pointer-events-none blob active-class transition-all duration-300',
                   item.current
-                    ? 'opacity-100 scale-100'
+                    ? 'opacity-100 scale-100 blob active-class '
                     : 'opacity-0 group-hover:opacity-70 group-hover:scale-90',
                 ]"
               ></span>
+            </a>
+          </div>
+        </div> -->
+        <div class="hidden sm:block relative">
+          <div class="flex space-x-4 relative">
+            <span
+              class="blob absolute transition-all duration-300"
+              :style="{
+                top: `${activePosition.top}px`,
+                left: `${activePosition.left}px`,
+              }"
+            ></span>
+
+            <a
+              v-for="item in navigation"
+              :key="item.name"
+              :href="item.name === resumeName ? '#' : item.href"
+              class="relative group rounded-md px-3 py-2 text-md text-black font-medium"
+              @click="handleClick(item, $event)"
+              ref="navItems"
+            >
+              {{ item.name }}
             </a>
           </div>
         </div>
@@ -55,7 +76,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <DisclosurePanel class="sm:hidden">
+    <!-- <DisclosurePanel class="sm:hidden">
       <div class="space-y-1 px-2 pt-2 pb-3">
         <DisclosureButton
           v-for="item in navigation"
@@ -74,17 +95,18 @@
           {{ item.name }}
         </DisclosureButton>
       </div>
-    </DisclosurePanel>
+    </DisclosurePanel> -->
   </Disclosure>
 </template>
 
 <script setup lang="ts">
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/solid";
+import { reactive } from "vue";
 import content from "../assets/content.json";
 
 const resumeName = content.sections.resume;
-const navigation = [
+let navigation = [
   { name: content.sections.about, href: "#landing-page", current: true },
   { name: content.sections.experience, href: "#experience", current: false },
   // { name: content.sections.projects, href: "#", current: false },
@@ -105,11 +127,42 @@ const navigation = [
   },
 ];
 
-const handleClick = (item: {
-  name: string;
-  href: string;
-  current: boolean;
-}) => {
+// const handleClick = (clickedItem: {
+//   name: string;
+//   href: string;
+//   current: boolean;
+// }) => {
+//   navigation = navigation.map((navItem) => ({
+//     ...navItem,
+//     current: navItem.name === clickedItem.name,
+//   }));
+
+//   if (clickedItem.name === resumeName) {
+//     window.open(clickedItem.href, "_blank");
+//   }
+// };
+
+const activePosition = reactive({ top: 0, left: 0 });
+
+const handleClick = (
+  item: {
+    name: string;
+    href: string;
+    current: boolean;
+  },
+  event: MouseEvent
+) => {
+  navigation = navigation.map((navItem) => ({
+    ...navItem,
+    current: navItem.name === item.name,
+  }));
+
+  const target = event.currentTarget as HTMLElement | null;
+  if (target) {
+    activePosition.top = target.offsetTop;
+    activePosition.left = target.offsetLeft;
+  }
+
   if (item.name === resumeName) {
     window.open(item.href, "_blank");
   }
@@ -118,10 +171,21 @@ const handleClick = (item: {
 
 <style scoped>
 .blob {
-  border-radius: 94% 31% 30% 67% / 67% 37% 56% 34%;
+  position: absolute;
   width: 60px;
   height: 40px;
   background-color: #0fa3b1;
-  box-shadow: -10vmin 10vmin 0 rgba(255, 255, 255, 0.07);
+  border-radius: 94% 31% 30% 67% / 67% 37% 56% 34%;
+  transition: all 0.3s ease-in-out;
+}
+
+.active-class {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.group:hover .blob {
+  opacity: 0.7;
+  transform: scale(0.9);
 }
 </style>
